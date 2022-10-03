@@ -9,7 +9,8 @@ import dominio.Persona;
 public class GestionMain {
     public static int cont;
     public static void main(String[] args) {
-        Persona p1 = new Persona("Jonathan", "Aguilar");
+        Empleado p1 = new Empleado("Jonathan", "Aguilar");
         System.out.println(p1);
+        
     }
 }
