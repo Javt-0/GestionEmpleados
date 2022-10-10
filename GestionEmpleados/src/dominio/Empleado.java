@@ -27,8 +27,4 @@ public class Empleado extends Persona{
         return super.toString() + "Numero de seguridad social: " + numSeg;
     }
     
-    @Override
-    public void imprimir(){
-        
-    }
 }

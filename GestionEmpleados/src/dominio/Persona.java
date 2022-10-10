@@ -5,7 +5,7 @@ import gestionmain.GestionMain ;
  *
  * @author jonat
  */
-public abstract class Persona {
+public class Persona {
     //Atributos
     private String nombre;
     private String apellido;
@@ -51,7 +51,5 @@ public abstract class Persona {
         return sb.toString();
     }
     
-    //Metodos
-    abstract public void imprimir();
     
 }
