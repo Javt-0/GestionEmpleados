@@ -1,11 +1,13 @@
 
 package dominio;
-import gestionmain.GestionMain ;
+
+import java.io.Serializable;
+
 /**
  *
  * @author jonat
  */
-public class Persona {
+public class Persona implements Serializable{
     //Atributos
     private String nombre;
     private String apellido;
@@ -13,14 +15,35 @@ public class Persona {
    
     //Constructor
     public Persona() {
-        GestionMain.cont ++;
-        id = GestionMain.cont;
+        
     }
 
     public Persona(String nombre, String apellido) {
         this();
         this.nombre = nombre;
         this.apellido = apellido;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 43 * hash + this.id;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Persona other = (Persona) obj;
+        return this.id == other.id;
     }
     
     //Set y Get
